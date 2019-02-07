@@ -1,60 +1,50 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="container border" id="app">
+    <app-header></app-header>
+    <div class="row">
+      <div class="col-3 bg-secondary">
+      </div>
+      <div class="col-9 px-4 py-3">
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  import Header from './components/Header.vue';
+
+  export default {
+    name: 'app',
+    data() {
+      return {
+        msg: 'Hello world!'
+      }
+    },
+    components: {
+      appHeader: Header
     }
   }
-}
+
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .fade-enter {
+    opacity: 0;
+  }
 
-h1, h2 {
-  font-weight: normal;
-}
+  .fade-enter-active {
+    transition: all 0.5s;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  .fade-leave {
+    /* opacity: 1; */
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+  .fade-leave-active {
+    transition: all 0.5s;
+    opacity: 0;
+  }
 </style>
