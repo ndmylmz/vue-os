@@ -39,10 +39,6 @@
     transition: all 0.5s;
   }
 
-  .fade-leave {
-    /* opacity: 1; */
-  }
-
   .fade-leave-active {
     transition: all 0.5s;
     opacity: 0;
