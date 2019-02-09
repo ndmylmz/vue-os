@@ -1,7 +1,8 @@
 <template>
   <div class="btn-group" role="group" aria-label="Basic example">
+
     <router-link v-for="team in optimusTeams" :to="{ name : 'retroChildrenLink', params: { teamName : team } }"
-      tag="button" active-class="active" class="btn btn-secondary">{{ team }}</router-link>
+      tag="button" active-class="active" class="btn btn-secondary team-nav">{{ team }}</router-link>
   </div>
 </template>
 
