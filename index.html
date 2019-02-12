@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>vue-os</title>
-    <style>
-      .row.metrics .col {
-    border: 1px solid #45b6e3;
-    text-align: center;
-    padding: 10px;
-    background: #7fdbff1f;
-    color: #3D9970;
-}
 
-button.btn.btn-secondary.router-link-exact-active.active {
-    color: #45b6e3;
-    background: white;
-    border: 1px solid #7FDBFF;
-}
+<head>
+  <meta charset="utf-8">
+  <title>vue-os</title>
+  <style>
+    .metrics>div {
+      border: 1px solid #45b6e3;
+      text-align: center;
+      padding: 10px;
+      background: #7fdbff1f;
+      color: #3D9970;
+    }
 
-.team-nav{
-    box-shadow:none!important;
-}
+    button.btn.btn-secondary.router-link-exact-active.active {
+      color: #45b6e3;
+      background: white;
+      border: 1px solid #7FDBFF;
+    }
 
+    .team-nav {
+      box-shadow: none !important;
+    }
 
-    </style>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="/dist/build.js"></script>
-  </body>
+    .statistic>div {
+      padding: 2px;
+      border-bottom: 1px solid grey;
+    }
+
+    .statistic>div:last-of-type {
+      border-bottom: none;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="/dist/build.js"></script>
+</body>
+
 </html>
