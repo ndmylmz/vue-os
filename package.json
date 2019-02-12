@@ -6,16 +6,22 @@
   "license": "",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "cross-env  webpack-dev-server --mode development --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "json": "json-server -p 3500 dummy.json"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
     "bootstrap-vue": "^2.0.0-rc.11",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "vue": "^2.5.11",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "vuejs-datepicker": "^1.5.4",
+    "vuelidate": "^0.7.4",
+    "vuex": "^3.0.1"
   },
   "browserslist": [
     "> 1%",
@@ -30,12 +36,16 @@
     "bootstrap-sass": "^3.4.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "faker": "^4.1.0",
     "file-loader": "^1.1.4",
+    "json-server": "^0.12.1",
+    "jsonwebtoken": "^8.1.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue-loader": "^13.0.5",
+    "vue-loader": "^14.2.2",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
   }
 }

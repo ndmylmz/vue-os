@@ -3,6 +3,7 @@
     <app-header></app-header>
     <div class="row">
       <div class="col-3 bg-secondary">
+        <team-description v-if="teamName"></team-description>
       </div>
       <div class="col-9 px-4 py-3">
         <transition name="fade" mode="out-in">
@@ -15,16 +16,26 @@
 
 <script>
   import Header from './components/Header.vue';
+  import teamDescription from './components/teamDescription.vue';
 
   export default {
     name: 'app',
     data() {
       return {
-        msg: 'Hello world!'
+        msg: 'Hello world!',
+        teamName: false,
+        startDate: '',
+      }
+    },
+    watch: {
+      '$route'(to, from) {
+        this.teamName = to.params.teamName;
+        this.startDate = to.params.startDate;
       }
     },
     components: {
-      appHeader: Header
+      appHeader: Header,
+      "team-description": teamDescription
     }
   }
 
