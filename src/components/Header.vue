@@ -25,13 +25,3 @@
   export default {}
 
 </script>
-
-/*
-Router-link kulllanılmasının sebebleri
-- Tıklandığında sayfayı direk olarak reload etmiyor. Bu linkler üzerinde bir click listener çalışarak yönlendirmeyi
-dingle page olarka yapıyor.
-- Değişken active classları var. Hangi sayfada olunduğunu anlamamızı kolaylaştırıyor.
-- tag="li" <- list item gibi davranmasını sağlıyor. - active-class -> kendisi active olduğunda ayrıca başka bir class
-  ekleyebiliyoru böylece. Burada bootstrap classı olan active classı ekledik.
-  - exact -> buradaki path exact olduğunda active classı eklenmesini yani sayfayı tanımasını sağlıyor.
-  */
