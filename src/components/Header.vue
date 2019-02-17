@@ -15,6 +15,7 @@
         <router-link class="nav-item nav-link" :to="{ name : 'kpiLink' }" tag="a" active-class="active">KPI Results</router-link>
         <router-link class="nav-item nav-link" :to="{ name : 'slackLink' }" tag="a" active-class="active">Slack
           Integration</router-link>
+          
       </div>
     </div>
   </nav>

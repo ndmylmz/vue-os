@@ -3,6 +3,7 @@ import KpiCalculation from './components/KpiCalculation.vue';
 import RetroMetrics from './components/RetroMetrics.vue';
 import SlackIntegration from './components/SlackIntegration.vue';
 
+
 export const routes = [{
     path: '/',
     component: MainPage,
