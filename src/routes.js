@@ -2,6 +2,7 @@ import MainPage from './components/Main.vue';
 import KpiCalculation from './components/KpiCalculation.vue';
 import RetroMetrics from './components/RetroMetrics.vue';
 import SlackIntegration from './components/SlackIntegration.vue';
+import ErrorPage from './components/ErrorPage.vue';
 
 
 export const routes = [{
@@ -27,5 +28,10 @@ export const routes = [{
     path: '/slack',
     component: SlackIntegration,
     name: 'slackLink'
+  },
+  {
+    path: '*',
+    component: ErrorPage,
+    name: 'errorPage'
   }
 ];
